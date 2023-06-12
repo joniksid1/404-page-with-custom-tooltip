@@ -1,0 +1,93 @@
+@keyframes tooltip {
+  to {
+    opacity: 1;
+  }
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  color: #2f80ed;
+  font-family: "Inter", Helvetica, Arial, sans-serif;
+  min-width: 32.5rem;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.mainInfo {
+  margin: 3.1rem 0 1.9rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image {
+  max-width: 520px;
+  max-height: 190px;
+}
+
+.mainText {
+  width: 27rem;
+  padding: .6rem 0 0 0;
+  font-size: 7.5rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+[tooltip] {
+  position: relative;
+}
+
+[tooltip]::before, [tooltip]::after {
+  opacity: 0;
+}
+
+[tooltip]:hover::after {
+  display: block;
+  position: absolute;
+  content: '';
+  width: .1em;
+  height: .1em;
+  background-color: #f1f1f1;
+  transform: rotate(45deg);
+  top: 1.36em;
+  left: 47%;
+  border-top: .1rem solid #808080;
+  border-left: .1rem solid #808080;
+  animation: tooltip .5s ease-out forwards;
+}
+
+[tooltip]:hover::before {
+  display: block;
+  position: absolute;
+  content: attr(tooltip);
+  top: 10.6rem;
+  left: 0;
+  padding: .6rem;
+  max-width: 27rem;
+  font-size: 1rem;
+  border-radius: .5ch;
+  background: #f1f1f1;
+  color: #2f80ed;
+  border: 2px solid #808080;
+  animation: tooltip .5s ease-in forwards;
+}
+
+.bottomText {
+  padding: 17.5rem 0 0 0;
+  font-size: 1rem;
+  font-style: normal;
+}
+
+.link {
+  background-color: transparent;
+  color: #2f80ed;
+  transition: opacity .5s;
+  margin: 0 0 0 .3em;
+}
+
+.link:hover {
+  opacity: .3;
+}
