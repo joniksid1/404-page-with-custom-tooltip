@@ -110,13 +110,26 @@ body {
   }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 520px) {
   :root {
     font-size: 12px;
   }
   .image {
     max-width: 320px;
     max-height: 120px;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  :root {
+    font-size: 10px;
+  }
+  [tooltip]:hover::before {
+    max-width: 26rem;
+  }
+  .image {
+    max-width: 250px;
+    max-height: 100px;
   }
 }
 
