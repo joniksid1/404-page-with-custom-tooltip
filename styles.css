@@ -48,7 +48,7 @@ body {
 }
 
 [tooltip]:hover::before {
-  display: block;
+  visibility: visible;
   position: absolute;
   content: attr(tooltip);
   top: 10.6rem;
@@ -64,7 +64,7 @@ body {
 }
 
 [tooltip]:hover::after {
-  display: block;
+  visibility: visible;
   position: absolute;
   z-index: 1;
   content: '';
@@ -76,7 +76,7 @@ body {
   left: 47%;
   border-top: 2px solid #2f80ed;
   border-left: 2px solid #2f80ed;
-  animation: tooltip .3s forwards;
+  animation: tooltip .5s ease-in-out forwards;
 }
 
 .footer {
